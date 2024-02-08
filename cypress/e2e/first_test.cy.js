@@ -15,4 +15,5 @@ describe('My First Test', function(){
         cy.get(".ico-cart").click()
     });
     
+    
 });
