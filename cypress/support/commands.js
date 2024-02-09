@@ -10,8 +10,10 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
+Cypress.Commands.add('userInput', (searchTxt) => { 
+    cy.xpath("//textarea[@id='APjFqb']").type(searchTxt);
+});
+
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })

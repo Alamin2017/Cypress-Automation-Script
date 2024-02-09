@@ -33,30 +33,13 @@ describe('Full Test Automation', () => {
         cy.xpath("//a[normalize-space()='Proceed To Checkout']").click();
         cy.xpath("//textarea[@name='message']").type("Already order some products");
         cy.xpath("//a[normalize-space()='Place Order']").click();
-
         cy.xpath('//input[@name="name_on_card"]').type("sumon");
         cy.xpath('//input[@name="card_number"]').type("4485233521979909");
         cy.xpath("//input[@placeholder='ex. 311']").type("748");
         cy.xpath("//input[@placeholder='MM']").type("9");
         cy.xpath("//input[@placeholder='YYYY']").type("2025");
-
         cy.xpath("//button[@id='submit']").click();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
     });
+
 });

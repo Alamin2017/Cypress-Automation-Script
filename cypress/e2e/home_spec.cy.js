@@ -10,9 +10,6 @@ describe("testing home page", () => {
       home.searchInput("iphone")
       home.getSearchButton().click()
     })
-    it("should search for a product", () => {
-      cy.visit("https://www.cypress.io/");
-      cy.xpath("//a[@id='dropdownProduct']").click();
-    })
+
  
 })
