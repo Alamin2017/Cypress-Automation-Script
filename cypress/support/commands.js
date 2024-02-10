@@ -14,6 +14,20 @@ Cypress.Commands.add('userInput', (searchTxt) => {
     cy.xpath("//textarea[@id='APjFqb']").type(searchTxt);
 });
 
+Cypress.Commands.add('getIframe',(iframe)=>{
+    return iframe=cy.get(iframe).its('0.contentDocument.body').should('be.visible').then(cy.wrap);
+})
+Cypress.Commands.add('login',(username,password)=>{
+    cy.xpath("//input[@placeholder='Username']").type(username);
+    cy.xpath("//input[@placeholder='Password']").type(password);
+    cy.xpath("//button[normalize-space()='Login']").click();
+})
+Cypress.Commands.add('logout',()=>{
+    cy.xpath("//i[@class='oxd-icon bi-caret-down-fill oxd-userdropdown-icon']").click();
+    cy.wait(2000);
+    cy.xpath("//a[normalize-space()='Logout']").click();
+})
+
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
