@@ -13,8 +13,8 @@ describe('DataDriven Test Automation', () => {
         cy.get('#user_full_name').type(signUpData.fullname);
         cy.get('#user_email_login').type(signUpData.email);
         cy.get('#user_password').type(signUpData.password);
-        cy.get('#tnc_checkbox').click();
-        cy.get('#user_submit').click();
+        cy.xpath("//input[@id='tnc_checkbox']").click();
+        cy.xpath("//input[@id='user_submit']").click();
     });
     // it('Should create user 2', () => {
     //     cy.visit('https://www.browserstack.com/users/sign_up');
